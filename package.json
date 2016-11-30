@@ -1,0 +1,39 @@
+{
+  "name": "cerebro-gif",
+  "version": "0.1.0",
+  "description": "Cerebro plugin to find relevant gifs",
+  "license": "MIT",
+  "repository": "KELiON/cerebro-gif",
+  "author": {
+    "name": "Alexandr Subbotin",
+    "email": "kelionweb@gmail.com",
+    "url": "asubbotin.ru"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "build": "webpack",
+    "prepublish": "rm -rf ./dist && npm run build"
+  },
+  "main": "dist/index.js",
+  "keywords": [
+    "gif",
+    "gifs",
+    "search",
+    "find",
+    "cerebro",
+    "cerebro-plugin"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "css-loader": "^0.26.0",
+    "react": "^15.4.1",
+    "cerebro-tools": "^0.1.0",
+    "style-loader": "^0.13.1",
+    "webpack": "2.1.0-beta.27"
+  }
+}
