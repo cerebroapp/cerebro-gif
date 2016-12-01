@@ -34,7 +34,7 @@ const cachedFetchGifs = memoize(fetchGifs);
  * @param  {String} options.term
  * @param  {Function} options.display
  */
-const gifPlugin = ({term, display}) => {
+const gifPlugin = ({term, display, actions}) => {
   let match = term.match(/^gif\s+(.+)/i);
   match = match || term.match(/(.+)\sgif$/i);
   if (match) {
@@ -43,6 +43,7 @@ const gifPlugin = ({term, display}) => {
         id: item.id,
         title: item.images.original.url,
         clipboard: item.images.original.url,
+        onSelect: () => actions.copyToClipboard(item.images.original.url),
         getPreview: () => <Preview images={item.images} id={item.id}  />
       }));
       display(response);
