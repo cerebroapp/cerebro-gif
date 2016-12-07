@@ -3,3 +3,4 @@ src
 node_modules
 screenshot.gif
 webpack.config.js
+scripts

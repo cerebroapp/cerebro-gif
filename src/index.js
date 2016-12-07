@@ -1,5 +1,6 @@
 const React = require('react');
 const Preview = require('./Preview');
+const icon = require('./plugin-icon.png');
 const { memoize } = require('cerebro-tools');
 
 /**
@@ -34,12 +35,13 @@ const cachedFetchGifs = memoize(fetchGifs);
  * @param  {String} options.term
  * @param  {Function} options.display
  */
-const gifPlugin = ({term, display, actions}) => {
+const fn = ({term, display, actions}) => {
   let match = term.match(/^gif\s+(.+)/i);
   match = match || term.match(/(.+)\sgif$/i);
   if (match) {
     cachedFetchGifs(match[1]).then(results => {
       const response = results.map(item => ({
+        icon,
         id: item.id,
         title: item.images.original.url,
         clipboard: item.images.original.url,
@@ -52,7 +54,8 @@ const gifPlugin = ({term, display, actions}) => {
 };
 
 module.exports = {
-  name: 'Gif',
+  fn,
+  icon,
+  name: 'Find relevant gif',
   keyword: 'gif',
-  fn: gifPlugin,
 };

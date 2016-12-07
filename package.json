@@ -1,6 +1,6 @@
 {
   "name": "cerebro-gif",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Cerebro plugin to find relevant gifs",
   "license": "MIT",
   "repository": "KELiON/cerebro-gif",
@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "webpack",
+    "debug": "./scripts/debug",
     "prepublish": "rm -rf ./dist && npm run build"
   },
   "main": "dist/index.js",
@@ -30,10 +31,11 @@
     "babel-loader": "^6.2.8",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
+    "cerebro-tools": "^0.1.0",
     "css-loader": "^0.26.0",
     "react": "^15.4.1",
-    "cerebro-tools": "^0.1.0",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.27"
   }
 }
