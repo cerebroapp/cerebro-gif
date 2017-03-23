@@ -1,5 +1,7 @@
 # cerebro-gif
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/KELiON/cerebro-gif.svg)](https://greenkeeper.io/)
+
 > [Cerebro](http://www.cerebroapp.com) plugin to find relevant gifs using [giphy](http://giphy.com/) API
 
 ![](screenshot.gif)
