@@ -1,6 +1,6 @@
 {
   "name": "cerebro-gif",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Cerebro plugin to find relevant gifs",
   "license": "MIT",
   "repository": "KELiON/cerebro-gif",
