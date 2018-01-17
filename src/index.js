@@ -27,7 +27,9 @@ const fetchGifs = searchTerm => {
  *
  * @type {Function}
  */
-const cachedFetchGifs = memoize(fetchGifs);
+const cachedFetchGifs = memoize(fetchGifs, {
+  maxAge: 30 * 60 * 1000 // expire after 30 minutes
+});
 
 /**
  * Cerebro plugin to find gifs related to something
